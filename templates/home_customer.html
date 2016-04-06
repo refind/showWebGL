@@ -226,39 +226,71 @@
                                             <div class="bs-example">
                                                 <div class="row">服装设计师</div>
                                                 <div class="row"><a href="">黄亚东</a>(1/18)</div>
-                                                <img src="/templates/img/customer_desire/u49.jpg" style="width: 90%;" classs="bs-example">
+                                                <div style="height: 150px;">
+                                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u49.jpg" style="max-height: 150px;max-width: 90%"></p>
+                                                </div>
                                                 <div class="row" style="text-align: center;">
-                                                    <canvas id="myLineChart1" width="200px" height="100px"></canvas>
+                                                    <canvas id="myBarChart11" width="200px" height="150px"></canvas>
+                                                </div>
+                                                <div class="row" style="text-align: center;">
+                                                    <canvas id="myLineChart1" width="200px" height="150px"></canvas>
+                                                </div>
+                                                <div class="row" style="text-align: center;">
+                                                    <canvas id="myBarChart21" width="200px" height="150px"></canvas>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="bs-example">
-                                                <div class="row">服装设计师</div>
-                                                <div class="row"><a href="">黄亚东</a>(1/18)</div>
-                                                <img src="/templates/img/customer_desire/u49.jpg" style="width: 90%;" classs="bs-example">
+                                                <div class="row">服装生产商</div>
+                                                <div class="row"><a href="">北京服装制造厂</a>(1/30)</div>
+                                                <div style="height: 150px;">
+                                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u47.jpg" style="max-height: 150px;max-width: 90%"></p>
+                                                </div>
                                                 <div class="row" style="text-align: center;">
-                                                    <canvas id="myLineChart2" width="180px" height="100px"></canvas>
+                                                    <canvas id="myBarChart12" width="200px" height="150px"></canvas>
+                                                </div>
+                                                <div class="row" style="text-align: center;">
+                                                    <canvas id="myLineChart2" width="180px" height="150px"></canvas>
+                                                </div>
+                                                <div class="row" style="text-align: center;">
+                                                    <canvas id="myBarChart22" width="200px" height="150px"></canvas>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="bs-example">
-                                                <div class="row">服装设计师</div>
-                                                <div class="row"><a href="">黄亚东</a>(1/18)</div>
-                                                <img src="/templates/img/customer_desire/u49.jpg" style="width: 90%;" classs="bs-example">
+                                                <div class="row">物流集散中心</div>
+                                                <div class="row"><a href="">北京5号仓库</a>(1/353)</div>
+                                                <div style="height: 150px;">
+                                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u46.png" style="max-height: 150px;max-width: 90%"></p>
+                                                </div>
                                                 <div class="row" style="text-align: center;">
-                                                    <canvas id="myLineChart3" width="180px" height="100px"></canvas>
+                                                    <canvas id="myBarChart13" width="200px" height="150px"></canvas>
+                                                </div>
+                                                <div class="row" style="text-align: center;">
+                                                    <canvas id="myLineChart3" width="180px" height="150px"></canvas>
+                                                </div>
+                                                <div class="row" style="text-align: center;">
+                                                    <canvas id="myBarChart23" width="200px" height="150px"></canvas>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="bs-example">
-                                                <div class="row">服装设计师</div>
-                                                <div class="row"><a href="">黄亚东</a>(1/18)</div>
-                                                <img src="/templates/img/customer_desire/u49.jpg" style="width: 90%;" classs="bs-example">
+                                                <div class="row">门到门配送服务商</div>
+                                                <div class="row"><a href="">顺风快递</a>(1/20)</div>
+                                                <div style="height: 150px;">
+                                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u45.jpg" style="max-height: 150px;max-width: 90%"></p>
+                                                </div>
                                                 <div class="row" style="text-align: center;">
-                                                    <canvas id="myLineChart4" width="180px" height="100px"></canvas>
+                                                    <canvas id="myBarChart14" width="200px" height="150px"></canvas>
+                                                </div>
+                                                <div class="row" style="text-align: center;">
+                                                    <canvas id="myLineChart4" width="180px" height="150px"></canvas>
+                                                </div>
+                                                <div class="row" style="text-align: center;">
+                                                    <canvas id="myBarChart24" width="200px" height="150px"></canvas>
                                                 </div>
                                             </div>
                                         </div>
@@ -765,6 +797,7 @@
     <script src="/templates/js/vendor/Chart.js"></script>
     <script src="/templates/js/main.js"></script>
     <script type="text/javascript" charset="utf-8" async defer>
+    //评价
     var linedata1 = {
         labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
         datasets: [{
@@ -778,14 +811,149 @@
             data: [5,4.5,5,5,4.5],
         }]
     };
-    var linedata2 = linedata1;linedata2.datasets[0].data=[5,5,4.5,5,4.5];
-    var linedata3 = linedata1;linedata3.datasets[0].data=[4.5,4.5,5,4.5,4.5];
-    var linedata4 = linedata1;linedata4.datasets[0].data=[4.5,5,4.5,4.5,5];
+    var linedata2 = {
+        labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+        datasets: [{
+            label: "My First dataset",
+            fillColor: "rgba(120,120,120,0.2)",
+            strokeColor: "rgba(120,120,120,1)",
+            pointColor: "rgba(120,120,120,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(120,120,120,1)",
+            data: [5,5,4.5,5,4.5],
+        }]
+    };
+    var linedata3 = {
+        labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+        datasets: [{
+            label: "My First dataset",
+            fillColor: "rgba(120,120,120,0.2)",
+            strokeColor: "rgba(120,120,120,1)",
+            pointColor: "rgba(120,120,120,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(120,120,120,1)",
+            data: [4.5,4.5,5,4.5,4.5],
+        }]
+    };
+    var linedata4 = {
+        labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+        datasets: [{
+            label: "My First dataset",
+            fillColor: "rgba(120,120,120,0.2)",
+            strokeColor: "rgba(120,120,120,1)",
+            pointColor: "rgba(120,120,120,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(120,120,120,1)",
+            data: [4.5,5,4.5,4.5,5],
+        }]
+    };
 
+    //价格
+    var bardata11 = {
+    labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+    datasets: [{
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.5)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [210,199,190,200,210]
+        }]
+    };
+    var bardata12 = {
+    labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+    datasets: [{
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.5)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [125,130,135,120,135]
+        }]
+    };
+    var bardata13 = {
+    labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+    datasets: [{
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.5)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [125,130,135,120,135]
+        }]
+    };
+    var bardata14 = {
+    labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+    datasets: [{
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.5)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [80,85,95,85,95]
+        }]
+    };
+
+    //销量
+    var bardata21 = {
+    labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+    datasets: [{
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [125,130,135,120,135]
+        }]
+    };
+    var bardata22 = {
+    labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+    datasets: [{
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [125,130,135,120,135]
+        }]
+    };
+    var bardata23 = {
+    labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+    datasets: [{
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [210,199,190,200,210]
+        }]
+    };
+    var bardata24 = {
+    labels: ["供应商1","供应商2","供应商3","供应商4","供应商5"],
+    datasets: [{
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [125,130,135,120,135]
+        }]
+    };
     // Chart.defaults.global.showScale = false;
     for (var i = 1; i <= 4; i++) {
         var ctx = $("#myLineChart"+i)[0].getContext("2d");
         var myNewChart = new Chart(ctx).Line(eval('linedata'+i));
+    }
+    for (var i = 1; i <= 4; i++) {
+        var ctx = $("#myBarChart1"+i)[0].getContext("2d");
+        var myNewChart = new Chart(ctx).Bar(eval('bardata1'+i));
+    }
+    for (var i = 1; i <= 4; i++) {
+        var ctx = $("#myBarChart2"+i)[0].getContext("2d");
+        var myNewChart = new Chart(ctx).Bar(eval('bardata2'+i));
     }
     </script>
 </body>
