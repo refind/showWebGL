@@ -1,3 +1,4 @@
+var scene3dArray = [];
 $(document).ready(function() {
     var imgdom = $('#psycho');
     var src = imgdom.css('background-image');
@@ -88,6 +89,11 @@ $(document).ready(function() {
                 // statements_def
                 break;
         }
+       
+       for( key3d in scene3dArray)
+       {
+            scene3dArray[key3d]();
+       }
     })
     $('#cloth-size').change(function() {
         if (this.value=="中号")
