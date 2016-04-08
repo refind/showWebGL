@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="/templates/css/bootstrap.min.css">
     <link rel="stylesheet" href="/templates/css/flat-ui.min.css">
     <link rel="stylesheet" href="/templates/css/main.css">
+    <style>
+    body{
+        width: 100%;
+    }
+    </style>
 </head>
 
 <body>
@@ -67,17 +72,15 @@
 <script src="/templates/js/vendor/pym.js"></script>
 <script src="/templates/js/main.js"></script>
 <script>
-var pymChild = new pym.Child({
-    id: "example-follow-links"
+$(document).ready(function() {
+    var pymChild = new pym.Child({
+        id: "iframe-customer-desire"
+    });
 });
-$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
-    pymChild.sendHeight();
-})
-$('a[data-toggle="tab"]').on('hidden.bs.tab', function(e) {
-    pymChild.sendHeight();
-})
-// var modal = new Array('#myModal1', '#myModal2', '#myModal3', '#myModal4')
-// $(document).ready(function() {
-//     pymChild.sendHeight();
-// });
+var pymParent21 = new pym.Parent('iframe-individual-smart-supply-chain', '/templates/home_customer_smart_chain.html', {});
+$('.btn-smart-chain').each(function(index, el) {
+    $(this.dataset.target).on('shown.bs.collapse', function() {
+        pymParent21.sendWidth();
+    });
+});
 </script>

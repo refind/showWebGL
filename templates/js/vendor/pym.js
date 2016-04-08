@@ -288,7 +288,10 @@
              * Handle parent height message from child.
              */
             var height = parseInt(message);
-
+            if (height==0) {
+                this.iframe.setAttribute('height', height + 'px');
+                height = this.el.childNodes[0].contentDocument.body.scrollHeight;
+            }
             this.iframe.setAttribute('height', height + 'px');
         };
 

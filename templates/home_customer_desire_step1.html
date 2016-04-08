@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>新电商</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="/templates/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/templates/favicon.ico">
+    <link rel="bookmark" href="/templates/favicon.ico">
+    <link rel="stylesheet" href="/templates/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/templates/css/flat-ui.min.css">
+    <link rel="stylesheet" href="/templates/css/main.css">
+    <style>
+    body {
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="desire-step1" class="col-md-4 col-md-offset-4">
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="输入需求">
+                            <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="microphone" style="text-align: center;">
+                        <table style="width: 100px;height: 100px;position: relative;margin: auto;background-image: url('/templates/img/customer_desire/u9.png');background-size: cover">
+                            <tr>
+                                <td>
+                                    <a style="cursor: pointer;padding: 25px;font-size: 0px;" data-desire-type="individual"></a>
+                                </td>
+                                <td>
+                                    <a style="cursor: pointer;padding: 25px;font-size: 0px;" data-desire-type="immediate"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a style="cursor: pointer;padding: 25px;font-size: 0px;" data-desire-type="cycle"></a>
+                                </td>
+                                <td>
+                                    <a style="cursor: pointer;padding: 25px;font-size: 0px;" data-desire-type="predict"></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="desire-step2">
+            <div id="individual">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th><strong>输入需求</strong></th>
+                                    <td>现在要定做一件西服送到我家</td>
+                                </tr>
+                                <tr>
+                                    <th><strong>成交结果</strong></th>
+                                    <td>
+                                        <a href="/templates/home_customer_map.html">北京服装制造厂</a>，西服，1套，动态成交价¥858</td>
+                                </tr>
+                                <tr>
+                                    <th><strong>定制设计</strong></th>
+                                    <td>修身、羊毛与涤纶混纺、蓝色、平驳领、单扣西服</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row" id="cloth-option" style="margin-bottom: 20px">
+                    <div class="col-md-5 col-md-offset-1">
+                        <table class="table" style="text-align: right;">
+                            <tbody>
+                                <tr>
+                                    <th><strong>商品名称</strong></th>
+                                    <td>
+                                        西装
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><strong>尺寸</strong></th>
+                                    <td>
+                                        <select id="cloth-size" class="form-control select select-inverse select-block">
+                                            <option value="大号" check>大号</option>
+                                            <option value="中号">中号</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><strong>面料</strong></th>
+                                    <td>
+                                        <select class="form-control select select-inverse select-block">
+                                            <option value="羊毛与涤纶混纺">羊毛与涤纶混纺</option>
+                                            <option value="羊毛与粘胶混纺">羊毛与粘胶混纺</option>
+                                            <option value="纯羊毛精纺">纯羊毛精纺</option>
+                                            <option value="纯羊毛粗纺">纯羊毛粗纺</option>
+                                            <option value="纯化纤仿毛">纯化纤仿毛</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><strong>颜色</strong></th>
+                                    <td>
+                                        <select class="form-control select select-inverse select-block">
+                                            <option value="蓝色">蓝色</option>
+                                            <option value="灰色">灰色</option>
+                                            <option value="黑色">黑色</option>
+                                            <option value="白色">白色</option>
+                                            <option value="红色">红色</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><strong>领型</strong></th>
+                                    <td>
+                                        <select class="form-control select select-inverse select-block">
+                                            <option value="平驳领">平驳领</option>
+                                            <option value="戗驳领">戗驳领</option>
+                                            <option value="青果领">青果领</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><strong>扣型</strong></th>
+                                    <td>
+                                        <select class="form-control select select-inverse select-block">
+                                            <option value="单扣">单扣</option>
+                                            <option value="双扣">双扣</option>
+                                            <option value="三扣">三扣</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn btn-primary btn-block btn-confirm-order">确认订单</button>
+                        <div class="btn-group btn-block" role="group">
+                            <button class="btn btn-info btn-smart-chain" type="button" data-toggle="collapse" data-target="#individual-smart-supply-chain" aria-expanded="false" aria-controls="individual-smart-supply-chain" style="width: 50%">智能供应链</button>
+                            <button class="btn btn-inverse" type="button" data-toggle="collapse" data-target="#individual-supply-chain" aria-expanded="false" aria-controls="individual-supply-chain" style="width: 50%">主动供应链</button>
+                        </div>
+                    </div>
+                    <div class="col-md-5" id="web3d_cloth" style="height:500px">
+                    </div>
+                </div>
+                <div class="row collapse" id="individual-smart-supply-chain" style="text-align: center;">
+                    <div id="iframe-individual-smart-supply-chain"></div>
+                </div>
+                <div class="row collapse" id="individual-supply-chain" style="text-align: center;margin-top: 20px">
+                    <div class="col-md-1" style="text-align: right;padding-top: 215px">
+                        <p style="font-size: 16px;line-height: 58px;margin: 0;">交易历史</p>
+                        <p style="font-size: 16px;line-height: 58px;margin: 0;">价格范围</p>
+                        <p style="font-size: 16px;line-height: 58px;margin: 0;">销量排名</p>
+                        <p style="font-size: 16px;line-height: 58px;margin: 0;">信用排名</p>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="col-md-3">
+                            <div class="row bs-example">
+                                <div class="row">服装设计师</div>
+                                <div class="row"><a href="">黄亚东</a>(1/18)</div>
+                                <div style="height: 150px;">
+                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u49.jpg" style="max-height: 150px;max-width: 90%"></p>
+                                </div>
+                                <table class="table" style="width: 100%">
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u193_input">
+                                                <option value="不限">不限</option>
+                                                <option value="0~1000">0~1000</option>
+                                                <option value="1000~2000">1000~2000</option>
+                                                <option value="2000~3000">2000~3000</option>
+                                                <option value="3000~5000">3000~5000</option>
+                                                <option value="5000~10000">5000~10000</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u194_input">
+                                                <option selected value="不限">不限</option>
+                                                <option value="黄亚东">黄亚东</option>
+                                                <option value="南艺璇">南艺璇</option>
+                                                <option value="顾乡">顾乡</option>
+                                                <option value="徐扬">徐扬</option>
+                                                <option value="孙骁">孙骁</option>
+                                                <option value="王瓅">王瓅</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u195_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u196_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row bs-example">
+                                <div class="row">服装生产商</div>
+                                <div class="row"><a href="">北京服装制造厂</a>(1/30)</div>
+                                <div style="height: 150px;">
+                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u47.jpg" style="max-height: 150px;max-width: 90%"></p>
+                                </div>
+                                <table class="table" style="width: 100%">
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u197_input">
+                                                <option value="不限">不限</option>
+                                                <option value="0~1000">0~1000</option>
+                                                <option value="1000~2000">1000~2000</option>
+                                                <option value="2000~3000">2000~3000</option>
+                                                <option value="3000~5000">3000~5000</option>
+                                                <option value="5000~10000">5000~10000</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u198_input">
+                                                <option value="不限">不限</option>
+                                                <option value="北京服装制造厂">北京服装制造厂</option>
+                                                <option value="丰台服装制造厂">丰台服装制造厂</option>
+                                                <option value="大红门服装制造厂">大红门服装制造厂</option>
+                                                <option value="动物园服装制造厂">动物园服装制造厂</option>
+                                                <option value="房山服装制造厂">房山服装制造厂</option>
+                                                <option value="顺义服装制造厂">顺义服装制造厂</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u199_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u200_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row bs-example">
+                                <div class="row">物流集散中心</div>
+                                <div class="row"><a href="">北京5号仓库</a>(1/353)</div>
+                                <div style="height: 150px;">
+                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u46.png" style="max-height: 150px;max-width: 90%"></p>
+                                </div>
+                                <table class="table" style="width: 100%">
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u201_input">
+                                                <option value="不限">不限</option>
+                                                <option value="0~1000">0~1000</option>
+                                                <option value="1000~2000">1000~2000</option>
+                                                <option value="2000~3000">2000~3000</option>
+                                                <option value="3000~5000">3000~5000</option>
+                                                <option value="5000~10000">5000~10000</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u202_input">
+                                                <option selected value="不限">不限</option>
+                                                <option value="5号仓">5号仓</option>
+                                                <option value="鲁谷集散中心">鲁谷集散中心</option>
+                                                <option value="六里桥集散中心">六里桥集散中心</option>
+                                                <option value="四惠集散中心">四惠集散中心</option>
+                                                <option value="上地集散中心">上地集散中心</option>
+                                                <option value="三元桥集散中心">三元桥集散中心</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u203_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u204_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row bs-example">
+                                <div class="row">门到门配送服务商</div>
+                                <div class="row"><a href="">顺风快递</a>(1/20)</div>
+                                <div style="height: 150px;">
+                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u45.jpg" style="max-height: 150px;max-width: 90%"></p>
+                                </div>
+                                <table class="table" style="width: 100%">
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u205_input">
+                                                <option value="不限">不限</option>
+                                                <option value="0~1000">0~1000</option>
+                                                <option value="1000~2000">1000~2000</option>
+                                                <option value="2000~3000">2000~3000</option>
+                                                <option value="3000~5000">3000~5000</option>
+                                                <option value="5000~10000">5000~10000</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u206_input">
+                                                <option selected value="不限">不限</option>
+                                                <option value="顺丰">顺丰</option>
+                                                <option value="申通">申通</option>
+                                                <option value="中通">中通</option>
+                                                <option value="圆通">圆通</option>
+                                                <option value="德邦">德邦</option>
+                                                <option value="韵达">韵达</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u207_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u208_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="immediate">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th><strong>输入需求</strong></th>
+                                    <td>现在要一辆小轿车送到我家</td>
+                                </tr>
+                                <tr>
+                                    <th><strong>成交结果</strong></th>
+                                    <td>
+                                        <a>北京汽车股份有限公司</a>，EV200，1辆，动态成交价¥118,900</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row" id="car-option" style="margin-bottom: 20px">
+                    <div class="col-md-5 col-md-offset-1">
+                        <table class="table" style="text-align: right;">
+                            <tbody>
+                                <tr>
+                                    <th><strong>商品名称</strong></th>
+                                    <td>
+                                        EV200
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><strong>型号</strong></th>
+                                    <td>
+                                        <select id="car-type" class="form-control select select-inverse select-block">
+                                            <option value="2015款 EV200 轻快版">2015款 EV200 轻快版</option>
+                                            <option value="2015款 EV200 轻秀版">2015款 EV200 轻秀版</option>
+                                            <option value="2015款 EV200 轻享版">2015款 EV200 轻享版</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><strong>颜色</strong></th>
+                                    <td>
+                                        <select id="car-color" class="form-control select select-inverse select-block">
+                                            <option value="黑色">黑色</option>
+                                            <option value="白色">白色</option>
+                                            <option value="红色">红色</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn btn-primary btn-block btn-confirm-order">确认订单</button>
+                        <div class="btn-group btn-block" role="group">
+                            <button class="btn btn-in btn-smart-chainfo" type="button" data-toggle="collapse" data-target="#immediate-smart-supply-chain" aria-expanded="false" aria-controls="immediate-smart-supply-chain" style="width: 50%">智能供应链</button>
+                            <button class="btn btn-inverse" type="button" data-toggle="collapse" data-target="#immediate-supply-chain" aria-expanded="false" aria-controls="immediate-supply-chain" style="width: 50%">主动供应链</button>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-5" id="web3d_car" style="height:500px">
+                                    </div> -->
+                </div>
+                <div class="row collapse" id="immediate-smart-supply-chain" style="text-align: center;">
+                    <!-- <div id="iframe-individual-smart-supply-chain"></div> -->
+                </div>
+                <div class="row collapse" id="immediate-supply-chain" style="text-align: center;margin-top: 20px">
+                    <div class="col-md-1" style="text-align: right;padding-top: 215px">
+                        <p style="font-size: 16px;line-height: 58px;margin: 0;">交易历史</p>
+                        <p style="font-size: 16px;line-height: 58px;margin: 0;">价格范围</p>
+                        <p style="font-size: 16px;line-height: 58px;margin: 0;">销量排名</p>
+                        <p style="font-size: 16px;line-height: 58px;margin: 0;">信用排名</p>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="col-md-3">
+                            <div class="row bs-example">
+                                <div class="row">服装设计师</div>
+                                <div class="row"><a href="">黄亚东</a>(1/18)</div>
+                                <div style="height: 150px;">
+                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u49.jpg" style="max-height: 150px;max-width: 90%"></p>
+                                </div>
+                                <table class="table" style="width: 100%">
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u193_input">
+                                                <option value="不限">不限</option>
+                                                <option value="0~1000">0~1000</option>
+                                                <option value="1000~2000">1000~2000</option>
+                                                <option value="2000~3000">2000~3000</option>
+                                                <option value="3000~5000">3000~5000</option>
+                                                <option value="5000~10000">5000~10000</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u194_input">
+                                                <option selected value="不限">不限</option>
+                                                <option value="黄亚东">黄亚东</option>
+                                                <option value="南艺璇">南艺璇</option>
+                                                <option value="顾乡">顾乡</option>
+                                                <option value="徐扬">徐扬</option>
+                                                <option value="孙骁">孙骁</option>
+                                                <option value="王瓅">王瓅</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u195_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u196_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row bs-example">
+                                <div class="row">服装生产商</div>
+                                <div class="row"><a href="">北京服装制造厂</a>(1/30)</div>
+                                <div style="height: 150px;">
+                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u47.jpg" style="max-height: 150px;max-width: 90%"></p>
+                                </div>
+                                <table class="table" style="width: 100%">
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u197_input">
+                                                <option value="不限">不限</option>
+                                                <option value="0~1000">0~1000</option>
+                                                <option value="1000~2000">1000~2000</option>
+                                                <option value="2000~3000">2000~3000</option>
+                                                <option value="3000~5000">3000~5000</option>
+                                                <option value="5000~10000">5000~10000</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u198_input">
+                                                <option value="不限">不限</option>
+                                                <option value="北京服装制造厂">北京服装制造厂</option>
+                                                <option value="丰台服装制造厂">丰台服装制造厂</option>
+                                                <option value="大红门服装制造厂">大红门服装制造厂</option>
+                                                <option value="动物园服装制造厂">动物园服装制造厂</option>
+                                                <option value="房山服装制造厂">房山服装制造厂</option>
+                                                <option value="顺义服装制造厂">顺义服装制造厂</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u199_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u200_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row bs-example">
+                                <div class="row">物流集散中心</div>
+                                <div class="row"><a href="">北京5号仓库</a>(1/353)</div>
+                                <div style="height: 150px;">
+                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u46.png" style="max-height: 150px;max-width: 90%"></p>
+                                </div>
+                                <table class="table" style="width: 100%">
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u201_input">
+                                                <option value="不限">不限</option>
+                                                <option value="0~1000">0~1000</option>
+                                                <option value="1000~2000">1000~2000</option>
+                                                <option value="2000~3000">2000~3000</option>
+                                                <option value="3000~5000">3000~5000</option>
+                                                <option value="5000~10000">5000~10000</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u202_input">
+                                                <option selected value="不限">不限</option>
+                                                <option value="5号仓">5号仓</option>
+                                                <option value="鲁谷集散中心">鲁谷集散中心</option>
+                                                <option value="六里桥集散中心">六里桥集散中心</option>
+                                                <option value="四惠集散中心">四惠集散中心</option>
+                                                <option value="上地集散中心">上地集散中心</option>
+                                                <option value="三元桥集散中心">三元桥集散中心</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u203_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u204_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row bs-example">
+                                <div class="row">门到门配送服务商</div>
+                                <div class="row"><a href="">顺风快递</a>(1/20)</div>
+                                <div style="height: 150px;">
+                                    <p style="text-align: center;"><img src="/templates/img/customer_desire/u45.jpg" style="max-height: 150px;max-width: 90%"></p>
+                                </div>
+                                <table class="table" style="width: 100%">
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u205_input">
+                                                <option value="不限">不限</option>
+                                                <option value="0~1000">0~1000</option>
+                                                <option value="1000~2000">1000~2000</option>
+                                                <option value="2000~3000">2000~3000</option>
+                                                <option value="3000~5000">3000~5000</option>
+                                                <option value="5000~10000">5000~10000</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u206_input">
+                                                <option selected value="不限">不限</option>
+                                                <option value="顺丰">顺丰</option>
+                                                <option value="申通">申通</option>
+                                                <option value="中通">中通</option>
+                                                <option value="圆通">圆通</option>
+                                                <option value="德邦">德邦</option>
+                                                <option value="韵达">韵达</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u207_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select select-inverse select-block" id="u208_input">
+                                                <option value="1~10">1~10</option>
+                                                <option value="1~20">1~20</option>
+                                                <option value="1~30">1~30</option>
+                                                <option value="1~40">1~40</option>
+                                                <option value="1~50">1~50</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cycle"></div>
+            <div id="predict"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="/templates/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="/templates/js/vendor/bootstrap.min.js"></script>
+<script src="/templates/js/vendor/flat-ui.js"></script>
+<script src="/templates/js/vendor/video.js"></script>
+<script src="/templates/js/vendor/pym.js"></script>
+<script src="/templates/js/main.js"></script>
+<script>
+$(document).ready(function() {
+    var pymChild = new pym.Child({
+        id: "iframe-customer-supply"
+    });
+    $('#mytab a[href="#cloth"]').tab('show');
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+        pymChild.sendHeight();
+    })
+});
+</script>
+
+<script>
+var emppath = "/templates/cloth3/tsinghua2_ani";
+if (!Detector.webgl) Detector.addGetWebGLMessage();
+var container;
+var camera, scene, renderer, controls, viewTransCtrl;
+
+var mouseX = 0,
+    mouseY = 0;
+//var boxlen, bbspere;
+var bbspere = new THREE.Sphere();
+
+var sceneBoundingBox = new THREE.Box3();
+
+
+var windowHalfX = window.innerWidth / 2;
+var windowHalfY = window.innerHeight / 2;
+
+var mixer;
+var clock = new THREE.Clock();
+
+init();
+animate1();
+
+
+function init() {
+
+    //container = document.createElement('div');
+    //var fatherDiv = document.getElementById('web3d_cloth');
+    //fatherDiv.appendChild(container);
+    container = document.getElementById('web3d_cloth');
+
+    camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 1000000);
+    camera.position.z = 100;
+
+    console.log("div size:", container.offsetWidth, container.offsetHeight);
+
+    controls = new THREE.TrackballControls(camera);
+    controls.rotateSpeed = 10.0;
+    controls.zoomSpeed = 1.2;
+    controls.panSpeed = 0.5;
+    controls.noZoom = false;
+    controls.noPan = false;
+    controls.staticMoving = true;
+    controls.dynamicDampingFactor = 0.3;
+    controls.keys = [65, 83, 68];
+    controls.addEventListener('change', render);
+
+    sceneBoundingBox.makeEmpty();
+
+    // scene
+
+    scene = new THREE.Scene();
+
+    //var ambient = new THREE.AmbientLight( 0x101030 );
+    var ambient = new THREE.AmbientLight(0xffffff);
+    scene.add(ambient);
+
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    directionalLight.position.set(1, 1, 1);
+    directionalLight.intensity = 0.5;
+    scene.add(directionalLight);
+
+
+    // texture
+    mixer = new THREE.AnimationMixer(scene);
+
+    var manager = new THREE.LoadingManager();
+    manager.onProgress = function(item, loaded, total) {
+
+        //console.log( item, loaded, total );
+    };
+
+    var texture = new THREE.Texture();
+
+    var onProgress = function(xhr) {
+        if (xhr.lengthComputable) {
+            var percentComplete = xhr.loaded / xhr.total * 100;
+            //console.log( Math.round(percentComplete, 2) + '% downloaded' );
+        }
+    };
+
+    var onError = function(xhr) {};
+
+    var loader = new THREE.JSONLoader();
+    var indexLoader = new THREE.JSONIndexLoader();
+    indexLoader.load(emppath + '/index.js', function(jsonData) {
+        //console.log('jsonData:', jsonData.guid.length);
+        for (var i = 0; i < jsonData.guid.length; ++i) {
+            var key = jsonData.guid[i];
+            loader.load(emppath + '/' + key + '.js',
+                //function( geometry, materials, pos, scale, rot) { createScene2( geometry, materials[0],  pos, scale, rot)}  
+                function(geometry, materials, wts) {
+                    createScene2(geometry, materials[0], wts)
+                }
+            );
+        }
+    });
+
+    //function createScene2( geometry, material, pos, scale, rot) {
+    function createScene2(geometry, material, wts) {
+
+        geometry.computeBoundingBox();
+        geometry.computeBoundingSphere();
+
+        geometry.computeFaceNormals();
+        geometry.computeVertexNormals();
+        mesh1 = new THREE.Mesh(geometry, material);
+        mesh1.name = geometry.name;
+        mesh1.applyMatrix(wts);
+
+        var bb = geometry.boundingBox;
+        //bb.applyMatrix4(wts);
+        sceneBoundingBox.expandByPoint(bb.min);
+        sceneBoundingBox.expandByPoint(bb.max);
+
+        bbspere = sceneBoundingBox.getBoundingSphere(); //sceneBoundingBox.getBoundingSphere();
+        var bbcenter = sceneBoundingBox.center();
+        var boxlen = bbspere.radius;
+
+
+        {
+            console.log(bb, bbspere, bbcenter, boxlen);
+            bbcenter.set(0, 120, 0);
+            //bbcenter = bb.center();
+            camera.lookAt(bbcenter);
+            controls.target.copy(bbcenter);
+            camera.position.set(-278, 113, 224);
+        }
+
+        scene.add(mesh1);
+
+        //console.log(  geometry );
+        if (geometry.animations)
+        //mixer.clipAction( geometry.animations[0], mesh1 )
+        //      .setDuration( 10 )          // one second
+        //      .startAt( 0/*- Math.random()*/ )    // random phase (already running)
+        //      .play();                    // let's go
+            mixer.clipAction(geometry.animations[0])
+            .setDuration(5)
+            .startAt(0 /*- Math.random()*/ ) // random phase (already running)
+            .play(); // let's go
+    }
+
+
+    renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true
+    });
+    renderer.setClearColor(0x3a6ea5, 0); //lrt
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
+    container.appendChild(renderer.domElement);
+
+}
+
+function onWindowResize() {
+
+    windowHalfX = container.offsetWidth / 2;
+    windowHalfY = container.offsetHeight / 2;
+
+    console.log('resize :', container.offsetWidth, container.offsetHeight);
+
+    camera.aspect = windowHalfX / windowHalfY;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
+
+    controls.handleResize();
+
+    //console.log(window.innerWidth, window.innerHeight);
+
+}
+scene3dArray['1'] = onWindowResize;
+
+function onDocumentMouseMove(event) {
+
+    mouseX = (event.clientX - windowHalfX) / 2;
+    mouseY = (event.clientY - windowHalfY) / 2;
+}
+
+function onDocumentTouchMove(event) {
+    mouseX = (event.clientX - windowHalfX) / 2;
+    mouseY = (event.clientY - windowHalfY) / 2;
+
+}
+
+function animate1() {
+    requestAnimationFrame(animate1);
+
+
+    var vec3len = camera.position.distanceTo(bbspere.center);
+    var lenmin = Math.max(0.1, vec3len - bbspere.radius);
+    var lenMax = vec3len + bbspere.radius;
+    //camera.near = lenmin;
+    //camera.far = lenMax;
+
+    //console.log(camera.near, camera.far, camera.position, bbspere.center);
+    controls.update();
+
+    var delta = clock.getDelta();
+    if (mixer)
+        mixer.update(delta);
+
+    render();
+}
+
+function render() {
+
+    renderer.render(scene, camera);
+
+}
+</script>

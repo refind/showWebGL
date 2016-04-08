@@ -61,8 +61,18 @@
         <p style="text-align: center;"><span><img src="/templates/img/customer_who/me_body.gif" alt=""></span></p>
     </div>
 </body>
+<script src="/templates/js/vendor/jquery-1.11.2.min.js"></script>
 <script src="/templates/js/vendor/pym.js"></script>
 <script>
-    var pymChild = new pym.Child({id:'example-follow-links1'});
+$(document).ready(function() {
+    var pymChild = new pym.Child({
+        id: 'iframe-customer-who'
+    });
+    $('img').load(function() {
+        pymChild.sendHeight();
+    });
+    
+});
 </script>
+
 </html>

@@ -23,8 +23,13 @@
 </body>
 <script type="text/javascript">
 function initialize() {
-    var mp = new BMap.Map('map');
-    mp.centerAndZoom(new BMap.Point(121.491, 31.233), 11);
+    var map = new BMap.Map('map');
+    map.centerAndZoom(new BMap.Point(116.4,39.9), 12);
+    map.enableScrollWheelZoom(true);
+    var local =  new BMap.LocalSearch(map,{
+        renderOptions:{map: map}
+    });
+    local.search("北京服装制造厂");
 }
 
 function loadScript() {

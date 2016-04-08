@@ -44,13 +44,14 @@ $(document).ready(function() {
     for (x in modal) {
         $(modal[x]).on('hide.bs.modal', function(e) {
             $('#psycho')[0].src = "/templates/img/image1_u1.gif";
+            $('#psycho').load(function(){
+                $('#my-options').css('top', $('#psycho')[0].clientHeight - $('#my-options').height());
+            });
         })
         $(modal[x]).on('show.bs.modal', function(e) {
             $('#psycho')[0].src = "/templates/img/image1_u3.gif";
-            $('#desire-step1').show();
-            $('#desire-step2').hide();
-            $('#desire-step2').children().hide();
-            $('#mydesirelabel')[0].innerHTML = '我的需求<span><img src="/templates/img/customer_who/me.png"></span>';
+            $('#my-options').css('top', $('#psycho')[0].clientHeight - $('#my-options').height());
+            // $('#mydesirelabel')[0].innerHTML = '我的需求<span><img src="/templates/img/customer_who/me.png"></span>';
         })
     }
 
@@ -76,7 +77,7 @@ $(document).ready(function() {
         $('#desire-step2').children('#' + desireType).show();
         switch (desireType) {
             case 'individual':
-                $('#mydesirelabel')[0].innerHTML = '我的需求——个性化定制<span><img src="/templates/img/customer_who/me.png"></span>';
+                // $('#mydesirelabel')[0].innerHTML = '我的需求——个性化定制<span><img src="/templates/img/customer_who/me.png"></span>';
                 break;
             default:
                 // statements_def
@@ -94,23 +95,6 @@ $(document).ready(function() {
     //我的供给显示和隐藏
     $('.items-sold').click(function() {
         var cloth = this.dataset.clothType;
-        this.href="home_customer_supply_step2_"+cloth+".html";
-    })
-    $('#mytab a[href="#cloth"]').tab('show');
-
-
-
-
-    // $('iframe').load(function(event) {
-    //     $(this).height(this.contentDocument.body.scrollHeight)
-    // });
-    // $('iframe').click(function(event) {
-    //     /* Act on the event */
-    // });;
-    // $('.collapse').on('shown.bs.collapse', function() {
-    //     $(this).children('iframe').height($(this).children('iframe')[0].contentDocument.body.scrollHeight);
-    // })
-    // $('.modal').on('shown.bs.modal', function() {
-    //     $(this).find('.modal-body').children('iframe').height($(this).find('.modal-body').children('iframe')[0].contentDocument.body.scrollHeight);
-    // })
+        this.href = "home_customer_supply_step2_" + cloth + ".html";
+    });
 });
