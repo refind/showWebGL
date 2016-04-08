@@ -157,18 +157,21 @@
 
 </html>
 <script>
-// var pymParent1 = new pym.Parent('iframe-customer-desire', '/templates/home_customer_desire_step1.html', {});
+var pymParent1 = new pym.Parent('iframe-customer-desire', '/templates/home_customer_desire_step1.html', {});
 var pymParent2 = new pym.Parent('iframe-customer-supply', '/templates/home_customer_supply_step1.html', {});
 var pymParent3 = new pym.Parent('iframe-customer-discover', '/templates/home_customer_discover_step1.html', {});
-var pymParent4 = new pym.Parent('iframe-customer-who', '/templates/home_customer_who.html', {});"iframe-individual-smart-supply-chain"
+var pymParent4 = new pym.Parent('iframe-customer-who', '/templates/home_customer_who.html', {});
 var modal = new Array('#myModal1', '#myModal2', '#myModal3', '#myModal4')
-for (x in modal) {
-    if (x != 0) {
-        $(modal[x]).on('shown.bs.modal', function(e) {
-          var c=parseInt(x)+1;
-            eval('pymParent' + c).sendWidth();
-        })
-    }
-
-}
+$(modal[0]).on('shown.bs.modal', function(e) {
+    eval('pymParent1').sendWidth();
+})
+$(modal[1]).on('shown.bs.modal', function(e) {
+    eval('pymParent2').sendWidth();
+})
+$(modal[2]).on('shown.bs.modal', function(e) {
+    eval('pymParent3').sendWidth();
+})
+$(modal[3]).on('shown.bs.modal', function(e) {
+    eval('pymParent4').sendWidth();
+})
 </script>
