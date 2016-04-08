@@ -16,47 +16,6 @@
 </head>
 
 <body>
-    <div id="supply-step1">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist" id="mytab">
-            <li role="presentation"><a href="#cloth" aria-controls="cloth" role="tab" data-toggle="tab">服装设计</a></li>
-            <li role="presentation" class="active"><a href="#logo" aria-controls="logo" role="tab" data-toggle="tab">LOGO设计</a></li>
-            <li role="presentation"><a href="#wrapper" aria-controls="wrapper" role="tab" data-toggle="tab">包装设计</a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade" id="cloth">
-                <div class="container-fluid">
-                    <div class="row">
-                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold" data-cloth-type="underwear">
-                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u15.gif"></span></p>
-                            <div>紧身衣设计</div>
-                        </a>
-                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold">
-                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u34.gif"></span></p>
-                            <div>T恤设计</div>
-                        </a>
-                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold">
-                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u36.gif"></span></p>
-                            <div>羽绒服设计</div>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold">
-                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u38.gif"></span></p>
-                            <div>卫衣设计</div>
-                        </a>
-                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold">
-                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u40.gif"></span></p>
-                            <div>球鞋设计</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade active" id="logo"></div>
-            <div role="tabpanel" class="tab-pane fade" id="wrapper"></div>
-        </div>
-    </div>
     <div id="supply-step2" class="container">
         <div id="underwear">
             <table class="table table-bordered">
@@ -205,3 +164,14 @@
     <script src="/templates/js/vendor/flat-ui.js"></script>
     <script src="/templates/js/vendor/video.js"></script>
     <script src="/templates/js/main.js"></script>
+    <script src="/templates/js/vendor/pym.js"></script>
+    <script>
+// function check_answer(e) {
+//     // highlight the correct answer
+//     // send updated height to parent
+//     pymChild.sendHeight();
+// }
+// $('.items-sold').on('click', check_answer);
+var pymChild = new pym.Child({id: "example-follow-links"});
+// pymChild.sendHeight();
+</script>

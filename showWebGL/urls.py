@@ -31,7 +31,8 @@ from sheep2 import views as sheep2_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^home/', home_views.index),
+    url(r'^home/$', home_views.index),
+    url(r'^home/smart_chain', home_views.get_smart_chain),
     url(r'^car1/', car1_views.index),
     url(r'^car2/', car2_views.index),
     url(r'^car3_1/', car3_1_views.index),

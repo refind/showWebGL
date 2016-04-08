@@ -47,9 +47,6 @@ $(document).ready(function() {
         })
         $(modal[x]).on('show.bs.modal', function(e) {
             $('#psycho')[0].src = "/templates/img/image1_u3.gif";
-            $('#supply-step1').show();
-            $('#supply-step2').hide();
-            $('#supply-step2').children().hide();
             $('#desire-step1').show();
             $('#desire-step2').hide();
             $('#desire-step2').children().hide();
@@ -91,28 +88,29 @@ $(document).ready(function() {
         }
     })
 
-    
-    $('#cloth-size').change(function() {
-    })
+
+    $('#cloth-size').change(function() {})
 
     //我的供给显示和隐藏
-    $('#supply-step1').show();
-    $('#supply-step2').hide();
-    $('#supply-step2').children().hide();
     $('.items-sold').click(function() {
-        $('#supply-step1').hide();
-        $('#supply-step2').show();
         var cloth = this.dataset.clothType;
-        $('#supply-step2').children('#' + cloth).show();
+        this.href="home_customer_supply_step2_"+cloth+".html";
     })
     $('#mytab a[href="#cloth"]').tab('show');
-    $("iframe").load(function() {
 
-        var ifm = this;
-        var subWeb = this.contentDocument;
-        if (ifm != null && subWeb != null) {
-            ifm.height = subWeb.body.clientHeight;
-            ifm.width = subWeb.body.clientWidth;
-        }
-    });
+
+
+
+    // $('iframe').load(function(event) {
+    //     $(this).height(this.contentDocument.body.scrollHeight)
+    // });
+    // $('iframe').click(function(event) {
+    //     /* Act on the event */
+    // });;
+    // $('.collapse').on('shown.bs.collapse', function() {
+    //     $(this).children('iframe').height($(this).children('iframe')[0].contentDocument.body.scrollHeight);
+    // })
+    // $('.modal').on('shown.bs.modal', function() {
+    //     $(this).find('.modal-body').children('iframe').height($(this).find('.modal-body').children('iframe')[0].contentDocument.body.scrollHeight);
+    // })
 });

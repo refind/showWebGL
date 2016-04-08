@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>新电商</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="/templates/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/templates/favicon.ico">
+    <link rel="bookmark" href="/templates/favicon.ico">
+    <link rel="stylesheet" href="/templates/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/templates/css/flat-ui.min.css">
+    <link rel="stylesheet" href="/templates/css/main.css">
+</head>
+
+<body>
+    <div id="supply-step1">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist" id="mytab">
+            <li role="presentation"><a href="#cloth" aria-controls="cloth" role="tab" data-toggle="tab">服装设计</a></li>
+            <li role="presentation" class="active"><a href="#logo" aria-controls="logo" role="tab" data-toggle="tab">LOGO设计</a></li>
+            <li role="presentation"><a href="#wrapper" aria-controls="wrapper" role="tab" data-toggle="tab">包装设计</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade" id="cloth">
+                <div class="container-fluid">
+                    <div class="row">
+                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold" data-cloth-type="underwear">
+                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u15.gif"></span></p>
+                            <div>紧身衣设计</div>
+                        </a>
+                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold">
+                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u34.gif"></span></p>
+                            <div>T恤设计</div>
+                        </a>
+                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold">
+                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u36.gif"></span></p>
+                            <div>羽绒服设计</div>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold">
+                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u38.gif"></span></p>
+                            <div>卫衣设计</div>
+                        </a>
+                        <a class="col-md-4 col-xs-4 col-sm-4 items-sold">
+                            <p style="text-align: center;"><span><img src="/templates/img/customer_supply/u40.gif"></span></p>
+                            <div>球鞋设计</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade active" id="logo"></div>
+            <div role="tabpanel" class="tab-pane fade" id="wrapper"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="/templates/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="/templates/js/vendor/bootstrap.min.js"></script>
+<script src="/templates/js/vendor/flat-ui.js"></script>
+<script src="/templates/js/vendor/video.js"></script>
+<script src="/templates/js/vendor/pym.js"></script>
+<script src="/templates/js/main.js"></script>
+<script>
+var pymChild = new pym.Child({
+    id: "example-follow-links"
+});
+$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+    pymChild.sendHeight();
+})
+$('a[data-toggle="tab"]').on('hidden.bs.tab', function(e) {
+    pymChild.sendHeight();
+})
+// var modal = new Array('#myModal1', '#myModal2', '#myModal3', '#myModal4')
+// $(document).ready(function() {
+//     pymChild.sendHeight();
+// });
+</script>
