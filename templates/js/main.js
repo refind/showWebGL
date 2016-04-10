@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 
     //我的需求
-    $("select").select2({ dropdownCssClass: 'dropdown-inverse' });
+    $("select").select2();
     $(".btn-confirm-order").click(function() {
         $(this).toggleClass("btn-primary");
         $(this).toggleClass("btn-danger");
@@ -67,23 +67,7 @@ $(document).ready(function() {
             this.textContent = "确认订单";
         }
     })
-    $('#desire-step1').show();
-    $('#desire-step2').hide();
-    $('#desire-step2').children().hide();
     $('#microphone a').click(function() {
-        var desireType = this.dataset.desireType;
-        $('#desire-step1').hide();
-        $('#desire-step2').show();
-        $('#desire-step2').children('#' + desireType).show();
-        switch (desireType) {
-            case 'individual':
-                // $('#mydesirelabel')[0].innerHTML = '我的需求——个性化定制<span><img src="/templates/img/customer_who/me.png"></span>';
-                break;
-            default:
-                // statements_def
-                break;
-        }
-
         for (key3d in scene3dArray) {
             scene3dArray[key3d]();
         }
